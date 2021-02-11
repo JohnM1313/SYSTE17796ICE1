@@ -18,12 +18,27 @@ public class Weather {
     public static void main(String[] args) {
         double[] temps = {3,5,6,-20,34,-17,45,10,-34,20,12,-20,-10,-14};
         double averageTemp = calcAvg(temps);
+        double maxTemp = calcMax(temps);
         System.out.println(averageTemp);
+        System.out.println(maxTemp);
+    }
+    public static double calcMax(double[]n)
+    {
+        double max = 0;
+        for(int i = 0; i<n.length;i++){
+            if(n[i]>max){
+                max = n[i];
+            }
+            else{
+                continue;
+            }
+        }
+        return max;
     }
     public static double calcAvg(double[] n)
     {
         double sum = 0;
-        for(int i=0; i<n.length; i++)
+        for(int i=0; i<n.length; i++){
             if(n[i]>= 50 || n[i]<=-50){
                 continue;
             }
@@ -31,7 +46,8 @@ public class Weather {
         {
            sum+=n[i];
         }
-        return sum/n.length;
+       }
+       return sum/n.length;
     } 
   }
     
