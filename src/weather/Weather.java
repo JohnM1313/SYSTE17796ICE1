@@ -14,7 +14,7 @@ public class Weather {
     /**
      * @param args the command line arguments
      */
-    /*I have edited the file*/
+    /*I have edited this file*/
     public static void main(String[] args) {
         double[] temps = {3,5,6,-20,34,-17,45,10,-34,20,12,-20,-10,-14};
         double averageTemp = calcAvg(temps);
